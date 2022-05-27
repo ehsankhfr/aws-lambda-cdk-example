@@ -49,10 +49,10 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install Dependencies
-        env:
-          TOKEN: ${{ secrets.CI_USER_PERSONAL_ACCESS_TOKEN }}
-        run: |
-          npm i
+        run: npm i
+        
+      - name: Build
+        run: npm run build
           
       - name: CDK deploy
         run: npm run deploy
