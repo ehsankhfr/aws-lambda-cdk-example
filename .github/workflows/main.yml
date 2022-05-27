@@ -48,5 +48,4 @@ jobs:
           npm i
           
       - name: CDK deploy for Testing
-        if: steps.extract_branch.outputs.branch == 'master'
         run: npm run deploy
