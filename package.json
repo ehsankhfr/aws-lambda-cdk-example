@@ -1,0 +1,25 @@
+{
+  "name": "aws-lambda-cdk-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd cdk; npm install",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cd cdk; cdk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehsankhfr/aws-lambda-cdk-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ehsankhfr/aws-lambda-cdk-example/issues"
+  },
+  "homepage": "https://github.com/ehsankhfr/aws-lambda-cdk-example#readme",
+  "dependencies": {
+    "typescript": "^4.7.2"
+  }
+}
