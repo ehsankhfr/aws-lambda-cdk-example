@@ -14,7 +14,7 @@ export class CdkStack extends cdk.Stack {
             timeout: cdk.Duration.seconds(5),
             runtime: lambda.Runtime.NODEJS_16_X,
             handler: 'main',
-            entry: path.join(__dirname, `./../../build/app.js`),
+            entry: path.join(__dirname, `/../../build/app.js`),
         });
 
         const api = new apigateway.RestApi(this, "helloWorldApi", {
