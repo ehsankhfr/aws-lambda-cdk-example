@@ -7,7 +7,7 @@
     "postinstall": "cd cdk; npm install",
     "build": "tsc",
     "watch": "tsc -w",
-    "cdk": "cd cdk; cdk"
+    "deploy": "cd cdk; npm run cdk"
   },
   "repository": {
     "type": "git",
