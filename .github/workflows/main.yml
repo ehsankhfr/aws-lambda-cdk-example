@@ -54,5 +54,5 @@ jobs:
         run: |
           npm i
           
-      - name: CDK deploy for Testing
+      - name: CDK deploy
         run: npm run deploy
