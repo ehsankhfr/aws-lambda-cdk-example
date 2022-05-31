@@ -1,15 +1,14 @@
 import * as cdk from '@aws-cdk/core';
 import * as apigateway from '@aws-cdk/aws-apigatewayv2';
-import { HttpLambdaIntegration } from '@aws-cdk/aws-apigatewayv2-integrations';
+import {HttpLambdaIntegration} from '@aws-cdk/aws-apigatewayv2-integrations';
 import * as lambda from '@aws-cdk/aws-lambda-nodejs';
-import * as path from "path";
 
 export class CdkStack extends cdk.Stack {
     constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
 
-        const helloWorldFunction =  new lambda.NodejsFunction(this, 'helloWorld', {
-            entry: path.resolve(__dirname, '../../src/hello.ts'),
+        const helloWorldFunction = new lambda.NodejsFunction(this, 'helloWorld', {
+            entry: '../../src/hello.ts',
             functionName: 'hello',
             handler: 'handler',
             memorySize: 512,
@@ -26,7 +25,7 @@ export class CdkStack extends cdk.Stack {
 
         httpApi.addRoutes({
             path: '/',
-            methods: [ apigateway.HttpMethod.GET ],
+            methods: [apigateway.HttpMethod.GET],
             integration: new HttpLambdaIntegration('helloWorldIntegration', helloWorldFunction)
         });
     }
