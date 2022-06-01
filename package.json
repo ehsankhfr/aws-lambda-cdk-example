@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd cdk; npm install",
-    "build": "tsc",
+    "build": "tsc; cp package.json package-lock.json ./cdk/lambda; cd ./cdk/lambda; npm ci",
     "watch": "tsc -w",
     "deploy": "cd cdk; npm run cdk"
   },
