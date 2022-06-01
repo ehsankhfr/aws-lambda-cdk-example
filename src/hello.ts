@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import fetch from 'cross-fetch';
 
 export const handler = async function (event: any, context: any) {
     const response = await fetch('https://api.predic8.de/shop/products/62');
